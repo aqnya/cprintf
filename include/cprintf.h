@@ -97,23 +97,23 @@ extern bool cprintf_print_color_only_tty;
 		char *cpgf_buf__ = malloc(cprintf_strlen__(cpgf_f__) + 16); \
 		sprintf(cpgf_buf__,                                         \
 			_Generic((cpgf_d__),                                \
-			_Bool: (cpgf_d__ ? "true" : "false"),               \
-			char: "%%%sc",                                      \
-			signed char: "%%%sd",                               \
-			unsigned char: "%%%sd",                             \
-			short: "%%%shd",                                    \
-			unsigned short: "%%%shu",                           \
-			int: "%%%sd",                                       \
-			unsigned int: "%%%su",                              \
-			long: "%%%sld",                                     \
-			unsigned long: "%%%slu",                            \
-			long long: "%%%slld",                               \
-			unsigned long long: "%%%sllu",                      \
-			float: "%%%sf",                                     \
-			double: "%%%sf",                                    \
-			long double: "%%%sLf",                              \
-			void *: "%%%sp",                                    \
-			default: "{unknown}"),                              \
+				_Bool: (cpgf_d__ ? "true" : "false"),       \
+				char: "%%%sc",                              \
+				signed char: "%%%sd",                       \
+				unsigned char: "%%%sd",                     \
+				short: "%%%shd",                            \
+				unsigned short: "%%%shu",                   \
+				int: "%%%sd",                               \
+				unsigned int: "%%%su",                      \
+				long: "%%%sld",                             \
+				unsigned long: "%%%slu",                    \
+				long long: "%%%slld",                       \
+				unsigned long long: "%%%sllu",              \
+				float: "%%%sf",                             \
+				double: "%%%sf",                            \
+				long double: "%%%sLf",                      \
+				void *: "%%%sp",                            \
+				default: "{unknown}"),                      \
 			cprintf_avoid_null__(cpgf_f__));                    \
 		cprintf_mark_buf__(cpgf_buf__);                             \
 		cpgf_buf__;                                                 \
